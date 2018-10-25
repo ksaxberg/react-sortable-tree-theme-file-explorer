@@ -179,6 +179,7 @@ class App extends Component {
                   matches.length > 0 ? searchFocusIndex % matches.length : 0,
               })
             }
+            canNodeHaveChildren={(node) => !!node.isDirectory}
             canDrag={({ node }) => !node.dragDisabled}
             canDrop={({ nextParent }) => !nextParent || nextParent.isDirectory}
             generateNodeProps={rowInfo => ({
